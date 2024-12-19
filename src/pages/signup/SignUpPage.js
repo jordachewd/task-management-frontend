@@ -58,7 +58,7 @@ class SignUpPage extends Component {
 
           <div>
             <FormField
-              id="outlined-name"
+              id="username"
               label="Username"
               margin="dense"
               variant="outlined"
@@ -67,7 +67,7 @@ class SignUpPage extends Component {
           </div>
           <div>
             <FormField
-              id="outlined-name"
+              id="password"
               label="Password"
               margin="dense"
               variant="outlined"
