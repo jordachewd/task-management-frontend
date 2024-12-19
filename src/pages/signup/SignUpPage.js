@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Button, TextField } from '@material-ui/core';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import { Button, TextField } from "@mui/material";
+import styled from "styled-components";
 
-import './SignUpPage.scss';
-import { inject } from 'mobx-react';
-import ErrorMessage from '../../components/ErrorMessage';
+import "./SignUpPage.scss";
+import { inject } from "mobx-react";
+import ErrorMessage from "../../components/ErrorMessage";
 
 const Heading = styled.h1`
   margin-top: 0;
@@ -22,13 +22,13 @@ const FormField = styled(TextField)`
   width: 100%;
 `;
 
-@inject('userStore', 'routerStore')
+@inject("userStore", "routerStore")
 class SignUpPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      password: '',
+      username: "",
+      password: "",
       errorMessage: null,
     };
   }
@@ -38,7 +38,7 @@ class SignUpPage extends Component {
 
     try {
       await this.props.userStore.signup(username, password);
-      window.location.hash = '/signin';
+      window.location.hash = "/signin";
     } catch (error) {
       const errorMessage = error.response.data.message;
       this.setState({ errorMessage });
@@ -62,7 +62,7 @@ class SignUpPage extends Component {
               label="Username"
               margin="dense"
               variant="outlined"
-              onChange={e => this.setState({ username: e.target.value })}
+              onChange={(e) => this.setState({ username: e.target.value })}
             />
           </div>
           <div>
@@ -72,13 +72,14 @@ class SignUpPage extends Component {
               margin="dense"
               variant="outlined"
               type="password"
-              onChange={e => this.setState({ password: e.target.value })}
+              onChange={(e) => this.setState({ password: e.target.value })}
             />
           </div>
           <p>
-            Passwords must contain at least 1 upper case letter, 1 lower case letter and one number OR special charracter.
+            Passwords must contain at least 1 upper case letter, 1 lower case
+            letter and one number OR special charracter.
           </p>
-          <hr/>
+          <hr />
           <div>
             <Button
               fullWidth
