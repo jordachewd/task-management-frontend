@@ -1,20 +1,32 @@
 name: Deploy
 
-on: [workflow_dispatch]
+on: 
+  workflow_dispatch:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
+    
     steps:
+      # Checkout repository
       - name: Git Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3 
 
+      # Cache Yarn dependencies
       - name: Yarn Cache
-        uses: c-hive/gha-yarn-cache@v1
-
+        uses: actions/cache@v3 
+        with:
+          path: |
+            ~/.yarn/cache
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+        
+      # Install dependencies
       - name: Install dependencies
-        run: yarn
+        run: yarn install --frozen-lockfile
 
+      # Build the React App
       - name: Build React App
         run: yarn build
         env:
@@ -22,6 +34,7 @@ jobs:
           REACT_APP_BASE_URL: ${{ secrets.REACT_APP_BASE_URL }}
           PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
 
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
