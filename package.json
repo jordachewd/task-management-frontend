@@ -5,20 +5,20 @@
   "dependencies": {
     "@material-ui/core": "^4.0.0",
     "@material-ui/icons": "^4.0.0",
-    "axios": "^0.18.0",
-    "mobx": "^5.9.4",
-    "mobx-react": "^5.4.4",
-    "mobx-react-router": "^4.0.7",
-    "node-sass": "^4.12.0",
-    "query-string": "^6.5.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router": "^5.0.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.0.1",
-    "rxjs": "^6.5.2",
-    "styled-components": "^4.2.0",
-    "typescript": "^3.4.5"
+    "axios": "^1.7.9",
+    "mobx": "^6.13.5",
+    "mobx-react": "^9.2.0",
+    "mobx-react-router": "^6.1.0",
+    "query-string": "^9.1.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.0.2",
+    "react-router-dom": "^7.0.2",
+    "react-scripts": "5.0.1",
+    "rxjs": "^7.8.1",
+    "sass": "^1.83.0",
+    "styled-components": "^6.1.13",
+    "typescript": "^5.7.2"
   },
   "scripts": {
     "start": "cross-env PORT=3001 react-app-rewired start",
@@ -45,7 +45,7 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "cross-env": "^7.0.3",
-    "customize-cra": "^0.2.12",
+    "customize-cra": "^1.0.0",
     "react-app-rewired": "^2.1.3"
   },
   "babel": {
