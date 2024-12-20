@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "https://jordachewd.github.io/task-management-frontend\n/static/css/main.985582f7.css",
-    "main.js": "https://jordachewd.github.io/task-management-frontend\n/static/js/main.4966b3f3.js",
+    "main.js": "https://jordachewd.github.io/task-management-frontend\n/static/js/main.ecf19a8f.js",
     "index.html": "https://jordachewd.github.io/task-management-frontend\n/index.html",
     "main.985582f7.css.map": "https://jordachewd.github.io/task-management-frontend\n/static/css/main.985582f7.css.map",
-    "main.4966b3f3.js.map": "https://jordachewd.github.io/task-management-frontend\n/static/js/main.4966b3f3.js.map"
+    "main.ecf19a8f.js.map": "https://jordachewd.github.io/task-management-frontend\n/static/js/main.ecf19a8f.js.map"
   },
   "entrypoints": [
     "static/css/main.985582f7.css",
-    "static/js/main.4966b3f3.js"
+    "static/js/main.ecf19a8f.js"
   ]
 }
