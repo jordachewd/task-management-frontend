@@ -67,6 +67,7 @@ class TasksPage extends Component {
 
   renderTasks = () => {
     const { tasksStore } = this.props;
+    
 
     if (!tasksStore.tasks.length) {
       return (

@@ -62,7 +62,7 @@ class TasksFilters extends Component {
           justify="space-between" // Add it here :)
           container
         >
-          <Grid item>
+          <Grid>
             <ControlContainer>
               <FormControl style={{ width: "220px" }}>
                 <TextField
@@ -81,7 +81,7 @@ class TasksFilters extends Component {
             </ControlContainer>
           </Grid>
 
-          <Grid item>
+          <Grid>
             <ControlContainer>
               <FormControl style={{ width: "220px" }}>
                 <Select

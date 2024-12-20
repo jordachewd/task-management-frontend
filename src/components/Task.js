@@ -47,7 +47,7 @@ class Task extends Component {
               justify="space-between" // Add it here :)
               container
             >
-              <Grid item>
+              <Grid>
                 <FormControl style={{ width: "140px" }}>
                   <Select
                     value={this.props.status}
@@ -61,7 +61,7 @@ class Task extends Component {
                 </FormControl>
               </Grid>
 
-              <Grid item>
+              <Grid>
                 <IconButton onClick={this.deleteTask}>
                   <DeleteIcon color="error" />
                 </IconButton>

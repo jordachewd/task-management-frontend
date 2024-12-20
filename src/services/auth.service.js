@@ -1,12 +1,9 @@
-//import { post } from 'axios';
 import axios from "axios";
 import BaseHttpService from "./base-http.service";
 
 export default class AuthService extends BaseHttpService {
   async signin(username, password) {
-    //const result = await post(`${this.BASE_URL}/auth/signin`, { username, password });
-
-    const result = axios.post(`${this.BASE_URL}/auth/signin`, {
+    const result = await axios.post(`${this.BASE_URL}/auth/signin`, {
       username,
       password,
     });
@@ -17,8 +14,7 @@ export default class AuthService extends BaseHttpService {
   }
 
   async signup(username, password) {
-    //await post(`${this.BASE_URL}/auth/signup`, { username, password });
-    axios.post(`${this.BASE_URL}/auth/signup`, { username, password });
+    await axios.post(`${this.BASE_URL}/auth/signup`, { username, password });
   }
 
   async signout() {
